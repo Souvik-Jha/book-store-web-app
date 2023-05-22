@@ -1,13 +1,24 @@
 import React from 'react';
+import { Router,Link,Switch, Route } from "react-router-dom" 
 
-import Dashboard from './components/Dashboard';
-
+ import HomePage from './components/HomePage';
+ import TodoApp from './components/TodoApp';
+import MealItem from './components/MealItem';
 
 function App() {
-  
+ 
+
 
   return(
-    <Dashboard/>
+    <>
+    <Switch>
+      <Route path="/HomePage" component={HomePage} />  
+      <Route path="/TodoApp" component={TodoApp} />  
+      <Route path="/MealItem" component={MealItem} />  
+    </Switch>
+    </>
+   
+
   )
 }
 
